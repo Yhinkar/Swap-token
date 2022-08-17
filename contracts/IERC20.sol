@@ -2,9 +2,6 @@
 pragma solidity ^0.8.7;
 
 
-// //@dev -contract that will enable for minting in this project
-// import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
-
 interface IERC20 {
      
     function totalSupply() external view returns (uint);

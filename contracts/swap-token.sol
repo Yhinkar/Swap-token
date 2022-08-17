@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC20/IERC20.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC20/ERC20.sol";
 
 //TEST1
 
@@ -63,7 +63,7 @@ contract SwapToken{
         toTRansferfrom(link, first, second, firstamount);
         toTRansferfrom(Web3, second, first, secondamount);
     }
-//private function for transfer of tokens save.
+//private function for transfer of tokens.
  function toTRansferfrom(IERC20 token, address _sender, address _recipient, uint amount) private {
      bool transferToken = token.transferFrom(_sender, _recipient, amount);
      require(transferToken, "oops! transaction failed");
